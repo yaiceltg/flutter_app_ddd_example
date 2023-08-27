@@ -12,8 +12,9 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import 'application/notes/note_list_bloc/note_list_bloc.dart' as _i3;
-import 'domain/notes/i_note_repository.dart' as _i4;
+import 'application/notes/note_form_bloc/note_form_bloc.dart' as _i3;
+import 'application/notes/note_list_bloc/note_list_bloc.dart' as _i5;
+import 'domain/notes/notes.dart' as _i4;
 
 // initializes the registration of main-scope dependencies inside of GetIt
 _i1.GetIt init(
@@ -26,7 +27,9 @@ _i1.GetIt init(
     environment,
     environmentFilter,
   );
-  gh.factory<_i3.NoteListBloc>(
-      () => _i3.NoteListBloc(gh<_i4.INoteRepository>()));
+  gh.factory<_i3.NoteFormBloc>(
+      () => _i3.NoteFormBloc(gh<_i4.INoteRepository>()));
+  gh.factory<_i5.NoteListBloc>(
+      () => _i5.NoteListBloc(gh<_i4.INoteRepository>()));
   return getIt;
 }
