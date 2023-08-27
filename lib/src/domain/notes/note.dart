@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import './value_objects.dart';
+import './note_value_objects.dart';
 import '../core/core.dart';
 
 part 'note.freezed.dart';
@@ -11,14 +11,14 @@ class Note with _$Note {
   const Note._();
   const factory Note({
     required UniqueId id,
-    required NoteName title,
-    String? description,
+    required NoteTitle title,
+    NoteDescription? description,
   }) = _Note;
 
   factory Note.empty() => Note(
         id: UniqueId(),
-        title: NoteName(''),
-        description: '',
+        title: NoteTitle(''),
+        description: NoteDescription(''),
       );
 
   Option<ValueFailure<dynamic>> get failureOption {

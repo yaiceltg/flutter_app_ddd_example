@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'failures.freezed.dart';
+part 'note_failures.freezed.dart';
 
 @freezed
 class NoteFailure with _$NoteFailure {

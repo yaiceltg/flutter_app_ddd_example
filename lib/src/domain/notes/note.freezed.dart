@@ -17,8 +17,8 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$Note {
   UniqueId get id => throw _privateConstructorUsedError;
-  NoteName get title => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
+  NoteTitle get title => throw _privateConstructorUsedError;
+  NoteDescription? get description => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NoteCopyWith<Note> get copyWith => throw _privateConstructorUsedError;
@@ -29,7 +29,7 @@ abstract class $NoteCopyWith<$Res> {
   factory $NoteCopyWith(Note value, $Res Function(Note) then) =
       _$NoteCopyWithImpl<$Res, Note>;
   @useResult
-  $Res call({UniqueId id, NoteName title, String? description});
+  $Res call({UniqueId id, NoteTitle title, NoteDescription? description});
 }
 
 /// @nodoc
@@ -57,11 +57,11 @@ class _$NoteCopyWithImpl<$Res, $Val extends Note>
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as NoteName,
+              as NoteTitle,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as NoteDescription?,
     ) as $Val);
   }
 }
@@ -72,7 +72,7 @@ abstract class _$$_NoteCopyWith<$Res> implements $NoteCopyWith<$Res> {
       __$$_NoteCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UniqueId id, NoteName title, String? description});
+  $Res call({UniqueId id, NoteTitle title, NoteDescription? description});
 }
 
 /// @nodoc
@@ -96,11 +96,11 @@ class __$$_NoteCopyWithImpl<$Res> extends _$NoteCopyWithImpl<$Res, _$_Note>
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as NoteName,
+              as NoteTitle,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as NoteDescription?,
     ));
   }
 }
@@ -114,9 +114,9 @@ class _$_Note extends _Note {
   @override
   final UniqueId id;
   @override
-  final NoteName title;
+  final NoteTitle title;
   @override
-  final String? description;
+  final NoteDescription? description;
 
   @override
   String toString() {
@@ -147,16 +147,16 @@ class _$_Note extends _Note {
 abstract class _Note extends Note {
   const factory _Note(
       {required final UniqueId id,
-      required final NoteName title,
-      final String? description}) = _$_Note;
+      required final NoteTitle title,
+      final NoteDescription? description}) = _$_Note;
   const _Note._() : super._();
 
   @override
   UniqueId get id;
   @override
-  NoteName get title;
+  NoteTitle get title;
   @override
-  String? get description;
+  NoteDescription? get description;
   @override
   @JsonKey(ignore: true)
   _$$_NoteCopyWith<_$_Note> get copyWith => throw _privateConstructorUsedError;

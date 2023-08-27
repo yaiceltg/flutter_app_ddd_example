@@ -1,6 +1,4 @@
-import 'package:app/src/domain/notes/failures.dart';
-import 'package:app/src/domain/notes/i_note_repository.dart';
-import 'package:app/src/domain/notes/note.dart';
+import 'package:app/src/domain/notes/notes.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:dartz/dartz.dart';

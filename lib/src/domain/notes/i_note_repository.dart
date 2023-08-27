@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:kt_dart/kt.dart';
 
-import './failures.dart';
+import './note_failures.dart';
 import './note.dart';
 
 /// Interface for a repository that retrieves notes.
