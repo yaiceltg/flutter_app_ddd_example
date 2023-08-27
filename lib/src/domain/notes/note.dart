@@ -1,24 +1,23 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-// core dependencies
-import 'package:app/domain/core/core.dart';
-// local dependencies
-import './value_objects.dart';
 
-part 'task.freezed.dart';
+import './value_objects.dart';
+import '../core/core.dart';
+
+part 'note.freezed.dart';
 
 @freezed
-class Task with _$Task {
-  const Task._();
-  const factory Task({
+class Note with _$Note {
+  const Note._();
+  const factory Note({
     required UniqueId id,
-    required TaskName title,
+    required NoteName title,
     String? description,
-  }) = _Task;
+  }) = _Note;
 
-  factory Task.empty() => Task(
+  factory Note.empty() => Note(
         id: UniqueId(),
-        title: TaskName(''),
+        title: NoteName(''),
         description: '',
       );
 
