@@ -1,3 +1,4 @@
+import 'package:app/src/application/notes/note_form_bloc/note_form_bloc.dart';
 import 'package:app/src/application/notes/note_list_bloc/note_list_bloc.dart';
 import 'package:app/src/injection.dart';
 import 'package:app/src/presentation/router/app_router.dart';
@@ -14,8 +15,14 @@ class NoteListPage extends StatelessWidget implements AutoRouteWrapper {
     return MultiBlocProvider(
       providers: [
         BlocProvider<NoteListBloc>(
-          create: (context) => getIt<NoteListBloc>(),
+          create: (context) => getIt<NoteListBloc>()
+            ..add(
+              const NoteListEvent.fetchNote(),
+            ),
         ),
+        BlocProvider<NoteFormBloc>(
+          create: (context) => getIt<NoteFormBloc>(),
+        )
       ],
       child: this,
     );
@@ -26,7 +33,31 @@ class NoteListPage extends StatelessWidget implements AutoRouteWrapper {
     return MultiBlocListener(
       listeners: [
         BlocListener<NoteListBloc, NoteListState>(
-          listener: (context, state) {},
+          listener: (context, state) {
+            state.maybeMap(
+              orElse: () {},
+              loaded: (_) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text(
+                      'Loaded',
+                    ),
+                  ),
+                );
+              },
+              failure: (_) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      _.maybeMap(
+                        orElse: () => 'Error',
+                      ),
+                    ),
+                  ),
+                );
+              },
+            );
+          },
         ),
       ],
       child: Scaffold(

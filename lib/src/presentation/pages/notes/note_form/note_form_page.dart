@@ -12,10 +12,59 @@ class NoteFormPage extends StatelessWidget {
         title: const Text(
           'Note Form Page',
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.save,
+            ),
+            tooltip: 'Save Note',
+          ),
+        ],
       ),
-      body: const Center(
-        child: Text(
-          'Note Form Page',
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Container(
+          child: Form(
+            child: Column(
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    hintText: 'Short title',
+                    labelText: 'Title',
+                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: const BorderSide(
+                        width: 0,
+                        style: BorderStyle.none,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                TextField(
+                  maxLines: 6,
+                  decoration: InputDecoration(
+                    filled: true,
+                    hintText: 'Write your note content here',
+                    labelText: 'Description',
+                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: const BorderSide(
+                        width: 0,
+                        style: BorderStyle.none,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );
