@@ -15,7 +15,7 @@ void main() async {
   /// Initialize the dependency injection container.
   ///
   configureDependencies(
-    env: Environment.dev,
+    env: Environment.prod,
   );
 
   ///

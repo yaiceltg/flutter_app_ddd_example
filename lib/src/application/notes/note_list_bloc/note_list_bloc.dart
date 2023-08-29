@@ -9,6 +9,9 @@ part 'note_list_bloc.freezed.dart';
 part 'note_list_event.dart';
 part 'note_list_state.dart';
 
+@dev
+@prod
+@test
 @injectable
 class NoteListBloc extends Bloc<NoteListEvent, NoteListState> {
   final INoteRepository _noteRepository;
@@ -22,21 +25,21 @@ class NoteListBloc extends Bloc<NoteListEvent, NoteListState> {
   Future handlerEvent(NoteListEvent event, Emitter<NoteListState> emitter) {
     return event.map(
       fetchNote: (_) async {
-        Either<NoteFailure, KtList<Note>> failureOrNotes =
-            await _noteRepository.getNotes();
+        // Either<NoteFailure, KtList<Note>> failureOrNotes =
+        //     await _noteRepository.getNotes();
 
-        failureOrNotes.fold(
-          (failure) {
-            emitter(
-              NoteListState.failure(failure),
-            );
-          },
-          (notes) {
-            emitter(
-              NoteListState.loaded(notes),
-            );
-          },
-        );
+        // failureOrNotes.fold(
+        //   (failure) {
+        //     emitter(
+        //       NoteListState.failure(failure),
+        //     );
+        //   },
+        //   (notes) {
+        //     emitter(
+        //       NoteListState.loaded(notes),
+        //     );
+        //   },
+        // );
 
         return emitter.forEach(
           _noteRepository.watchNotes(),

@@ -20,21 +20,27 @@ mixin _$NoteFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() http,
     required TResult Function() unknown,
+    required TResult Function() unexpected,
     required TResult Function() notFound,
+    required TResult Function() insufficientPermissions,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? http,
     TResult? Function()? unknown,
+    TResult? Function()? unexpected,
     TResult? Function()? notFound,
+    TResult? Function()? insufficientPermissions,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? http,
     TResult Function()? unknown,
+    TResult Function()? unexpected,
     TResult Function()? notFound,
+    TResult Function()? insufficientPermissions,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -42,21 +48,28 @@ mixin _$NoteFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_Http value) http,
     required TResult Function(_Unknown value) unknown,
+    required TResult Function(_Unexpected value) unexpected,
     required TResult Function(_NotFound value) notFound,
+    required TResult Function(_InsufficientPermissions value)
+        insufficientPermissions,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Http value)? http,
     TResult? Function(_Unknown value)? unknown,
+    TResult? Function(_Unexpected value)? unexpected,
     TResult? Function(_NotFound value)? notFound,
+    TResult? Function(_InsufficientPermissions value)? insufficientPermissions,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Http value)? http,
     TResult Function(_Unknown value)? unknown,
+    TResult Function(_Unexpected value)? unexpected,
     TResult Function(_NotFound value)? notFound,
+    TResult Function(_InsufficientPermissions value)? insufficientPermissions,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -118,7 +131,9 @@ class _$_Http implements _Http {
   TResult when<TResult extends Object?>({
     required TResult Function() http,
     required TResult Function() unknown,
+    required TResult Function() unexpected,
     required TResult Function() notFound,
+    required TResult Function() insufficientPermissions,
   }) {
     return http();
   }
@@ -128,7 +143,9 @@ class _$_Http implements _Http {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? http,
     TResult? Function()? unknown,
+    TResult? Function()? unexpected,
     TResult? Function()? notFound,
+    TResult? Function()? insufficientPermissions,
   }) {
     return http?.call();
   }
@@ -138,7 +155,9 @@ class _$_Http implements _Http {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? http,
     TResult Function()? unknown,
+    TResult Function()? unexpected,
     TResult Function()? notFound,
+    TResult Function()? insufficientPermissions,
     required TResult orElse(),
   }) {
     if (http != null) {
@@ -152,7 +171,10 @@ class _$_Http implements _Http {
   TResult map<TResult extends Object?>({
     required TResult Function(_Http value) http,
     required TResult Function(_Unknown value) unknown,
+    required TResult Function(_Unexpected value) unexpected,
     required TResult Function(_NotFound value) notFound,
+    required TResult Function(_InsufficientPermissions value)
+        insufficientPermissions,
   }) {
     return http(this);
   }
@@ -162,7 +184,9 @@ class _$_Http implements _Http {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Http value)? http,
     TResult? Function(_Unknown value)? unknown,
+    TResult? Function(_Unexpected value)? unexpected,
     TResult? Function(_NotFound value)? notFound,
+    TResult? Function(_InsufficientPermissions value)? insufficientPermissions,
   }) {
     return http?.call(this);
   }
@@ -172,7 +196,9 @@ class _$_Http implements _Http {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Http value)? http,
     TResult Function(_Unknown value)? unknown,
+    TResult Function(_Unexpected value)? unexpected,
     TResult Function(_NotFound value)? notFound,
+    TResult Function(_InsufficientPermissions value)? insufficientPermissions,
     required TResult orElse(),
   }) {
     if (http != null) {
@@ -225,7 +251,9 @@ class _$_Unknown implements _Unknown {
   TResult when<TResult extends Object?>({
     required TResult Function() http,
     required TResult Function() unknown,
+    required TResult Function() unexpected,
     required TResult Function() notFound,
+    required TResult Function() insufficientPermissions,
   }) {
     return unknown();
   }
@@ -235,7 +263,9 @@ class _$_Unknown implements _Unknown {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? http,
     TResult? Function()? unknown,
+    TResult? Function()? unexpected,
     TResult? Function()? notFound,
+    TResult? Function()? insufficientPermissions,
   }) {
     return unknown?.call();
   }
@@ -245,7 +275,9 @@ class _$_Unknown implements _Unknown {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? http,
     TResult Function()? unknown,
+    TResult Function()? unexpected,
     TResult Function()? notFound,
+    TResult Function()? insufficientPermissions,
     required TResult orElse(),
   }) {
     if (unknown != null) {
@@ -259,7 +291,10 @@ class _$_Unknown implements _Unknown {
   TResult map<TResult extends Object?>({
     required TResult Function(_Http value) http,
     required TResult Function(_Unknown value) unknown,
+    required TResult Function(_Unexpected value) unexpected,
     required TResult Function(_NotFound value) notFound,
+    required TResult Function(_InsufficientPermissions value)
+        insufficientPermissions,
   }) {
     return unknown(this);
   }
@@ -269,7 +304,9 @@ class _$_Unknown implements _Unknown {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Http value)? http,
     TResult? Function(_Unknown value)? unknown,
+    TResult? Function(_Unexpected value)? unexpected,
     TResult? Function(_NotFound value)? notFound,
+    TResult? Function(_InsufficientPermissions value)? insufficientPermissions,
   }) {
     return unknown?.call(this);
   }
@@ -279,7 +316,9 @@ class _$_Unknown implements _Unknown {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Http value)? http,
     TResult Function(_Unknown value)? unknown,
+    TResult Function(_Unexpected value)? unexpected,
     TResult Function(_NotFound value)? notFound,
+    TResult Function(_InsufficientPermissions value)? insufficientPermissions,
     required TResult orElse(),
   }) {
     if (unknown != null) {
@@ -291,6 +330,127 @@ class _$_Unknown implements _Unknown {
 
 abstract class _Unknown implements NoteFailure {
   const factory _Unknown() = _$_Unknown;
+}
+
+/// @nodoc
+abstract class _$$_UnexpectedCopyWith<$Res> {
+  factory _$$_UnexpectedCopyWith(
+          _$_Unexpected value, $Res Function(_$_Unexpected) then) =
+      __$$_UnexpectedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_UnexpectedCopyWithImpl<$Res>
+    extends _$NoteFailureCopyWithImpl<$Res, _$_Unexpected>
+    implements _$$_UnexpectedCopyWith<$Res> {
+  __$$_UnexpectedCopyWithImpl(
+      _$_Unexpected _value, $Res Function(_$_Unexpected) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_Unexpected implements _Unexpected {
+  const _$_Unexpected();
+
+  @override
+  String toString() {
+    return 'NoteFailure.unexpected()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Unexpected);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() http,
+    required TResult Function() unknown,
+    required TResult Function() unexpected,
+    required TResult Function() notFound,
+    required TResult Function() insufficientPermissions,
+  }) {
+    return unexpected();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? http,
+    TResult? Function()? unknown,
+    TResult? Function()? unexpected,
+    TResult? Function()? notFound,
+    TResult? Function()? insufficientPermissions,
+  }) {
+    return unexpected?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? http,
+    TResult Function()? unknown,
+    TResult Function()? unexpected,
+    TResult Function()? notFound,
+    TResult Function()? insufficientPermissions,
+    required TResult orElse(),
+  }) {
+    if (unexpected != null) {
+      return unexpected();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Http value) http,
+    required TResult Function(_Unknown value) unknown,
+    required TResult Function(_Unexpected value) unexpected,
+    required TResult Function(_NotFound value) notFound,
+    required TResult Function(_InsufficientPermissions value)
+        insufficientPermissions,
+  }) {
+    return unexpected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Http value)? http,
+    TResult? Function(_Unknown value)? unknown,
+    TResult? Function(_Unexpected value)? unexpected,
+    TResult? Function(_NotFound value)? notFound,
+    TResult? Function(_InsufficientPermissions value)? insufficientPermissions,
+  }) {
+    return unexpected?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Http value)? http,
+    TResult Function(_Unknown value)? unknown,
+    TResult Function(_Unexpected value)? unexpected,
+    TResult Function(_NotFound value)? notFound,
+    TResult Function(_InsufficientPermissions value)? insufficientPermissions,
+    required TResult orElse(),
+  }) {
+    if (unexpected != null) {
+      return unexpected(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Unexpected implements NoteFailure {
+  const factory _Unexpected() = _$_Unexpected;
 }
 
 /// @nodoc
@@ -333,7 +493,9 @@ class _$_NotFound implements _NotFound {
   TResult when<TResult extends Object?>({
     required TResult Function() http,
     required TResult Function() unknown,
+    required TResult Function() unexpected,
     required TResult Function() notFound,
+    required TResult Function() insufficientPermissions,
   }) {
     return notFound();
   }
@@ -343,7 +505,9 @@ class _$_NotFound implements _NotFound {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? http,
     TResult? Function()? unknown,
+    TResult? Function()? unexpected,
     TResult? Function()? notFound,
+    TResult? Function()? insufficientPermissions,
   }) {
     return notFound?.call();
   }
@@ -353,7 +517,9 @@ class _$_NotFound implements _NotFound {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? http,
     TResult Function()? unknown,
+    TResult Function()? unexpected,
     TResult Function()? notFound,
+    TResult Function()? insufficientPermissions,
     required TResult orElse(),
   }) {
     if (notFound != null) {
@@ -367,7 +533,10 @@ class _$_NotFound implements _NotFound {
   TResult map<TResult extends Object?>({
     required TResult Function(_Http value) http,
     required TResult Function(_Unknown value) unknown,
+    required TResult Function(_Unexpected value) unexpected,
     required TResult Function(_NotFound value) notFound,
+    required TResult Function(_InsufficientPermissions value)
+        insufficientPermissions,
   }) {
     return notFound(this);
   }
@@ -377,7 +546,9 @@ class _$_NotFound implements _NotFound {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Http value)? http,
     TResult? Function(_Unknown value)? unknown,
+    TResult? Function(_Unexpected value)? unexpected,
     TResult? Function(_NotFound value)? notFound,
+    TResult? Function(_InsufficientPermissions value)? insufficientPermissions,
   }) {
     return notFound?.call(this);
   }
@@ -387,7 +558,9 @@ class _$_NotFound implements _NotFound {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Http value)? http,
     TResult Function(_Unknown value)? unknown,
+    TResult Function(_Unexpected value)? unexpected,
     TResult Function(_NotFound value)? notFound,
+    TResult Function(_InsufficientPermissions value)? insufficientPermissions,
     required TResult orElse(),
   }) {
     if (notFound != null) {
@@ -399,4 +572,126 @@ class _$_NotFound implements _NotFound {
 
 abstract class _NotFound implements NoteFailure {
   const factory _NotFound() = _$_NotFound;
+}
+
+/// @nodoc
+abstract class _$$_InsufficientPermissionsCopyWith<$Res> {
+  factory _$$_InsufficientPermissionsCopyWith(_$_InsufficientPermissions value,
+          $Res Function(_$_InsufficientPermissions) then) =
+      __$$_InsufficientPermissionsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_InsufficientPermissionsCopyWithImpl<$Res>
+    extends _$NoteFailureCopyWithImpl<$Res, _$_InsufficientPermissions>
+    implements _$$_InsufficientPermissionsCopyWith<$Res> {
+  __$$_InsufficientPermissionsCopyWithImpl(_$_InsufficientPermissions _value,
+      $Res Function(_$_InsufficientPermissions) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_InsufficientPermissions implements _InsufficientPermissions {
+  const _$_InsufficientPermissions();
+
+  @override
+  String toString() {
+    return 'NoteFailure.insufficientPermissions()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InsufficientPermissions);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() http,
+    required TResult Function() unknown,
+    required TResult Function() unexpected,
+    required TResult Function() notFound,
+    required TResult Function() insufficientPermissions,
+  }) {
+    return insufficientPermissions();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? http,
+    TResult? Function()? unknown,
+    TResult? Function()? unexpected,
+    TResult? Function()? notFound,
+    TResult? Function()? insufficientPermissions,
+  }) {
+    return insufficientPermissions?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? http,
+    TResult Function()? unknown,
+    TResult Function()? unexpected,
+    TResult Function()? notFound,
+    TResult Function()? insufficientPermissions,
+    required TResult orElse(),
+  }) {
+    if (insufficientPermissions != null) {
+      return insufficientPermissions();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Http value) http,
+    required TResult Function(_Unknown value) unknown,
+    required TResult Function(_Unexpected value) unexpected,
+    required TResult Function(_NotFound value) notFound,
+    required TResult Function(_InsufficientPermissions value)
+        insufficientPermissions,
+  }) {
+    return insufficientPermissions(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Http value)? http,
+    TResult? Function(_Unknown value)? unknown,
+    TResult? Function(_Unexpected value)? unexpected,
+    TResult? Function(_NotFound value)? notFound,
+    TResult? Function(_InsufficientPermissions value)? insufficientPermissions,
+  }) {
+    return insufficientPermissions?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Http value)? http,
+    TResult Function(_Unknown value)? unknown,
+    TResult Function(_Unexpected value)? unexpected,
+    TResult Function(_NotFound value)? notFound,
+    TResult Function(_InsufficientPermissions value)? insufficientPermissions,
+    required TResult orElse(),
+  }) {
+    if (insufficientPermissions != null) {
+      return insufficientPermissions(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _InsufficientPermissions implements NoteFailure {
+  const factory _InsufficientPermissions() = _$_InsufficientPermissions;
 }

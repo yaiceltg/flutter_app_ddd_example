@@ -7,6 +7,9 @@ part 'app_event.dart';
 part 'app_state.dart';
 part 'app_bloc.freezed.dart';
 
+@dev
+@prod
+@test
 @injectable
 class AppBloc extends Bloc<AppEvent, AppState> {
   AppBloc() : super(AppState.initial()) {
