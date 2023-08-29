@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "775179144681",
+    "project_id": "flutter-ddd-example-app",
+    "storage_bucket": "flutter-ddd-example-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775179144681:android:975ce4d2891f9a54f0cf78",
+        "android_client_info": {
+          "package_name": "com.yaiceltg.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775179144681-quprfbtcrv9ipil00hv9vtjq9h525pa4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIoZcB_BAkbS83pQQ0OfDSVnY26hyJDOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775179144681-quprfbtcrv9ipil00hv9vtjq9h525pa4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "775179144681-m0mhhimgq0foo1tlacjvie4fk1idkk90.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yaiceltg.app.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
