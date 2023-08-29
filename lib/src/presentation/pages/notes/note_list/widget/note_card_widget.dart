@@ -16,6 +16,8 @@ class NoteCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
+
+      color: note.color.getOrCrash(),
       shape: RoundedRectangleBorder(
         side: BorderSide(
           color: Theme.of(context).colorScheme.outline,
@@ -28,7 +30,7 @@ class NoteCardWidget extends StatelessWidget {
       // unless you need it.
       clipBehavior: Clip.hardEdge,
       child: InkWell(
-        splashColor: Colors.blue.withAlpha(30),
+        splashColor: note.color.getOrCrash(),
         onTap: () {
           debugPrint('Card tapped.');
         },

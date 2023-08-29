@@ -15,6 +15,8 @@ class NoteLocalRepository implements INoteRepository {
     Note(
       id: UniqueId(),
       title: NoteTitle('My first note'),
+      description: NoteBody('This is my first note'),
+      color: NoteColor(NoteColor.predefinedColors.first),
     ),
   ];
   final StreamController _streamController = StreamController<List<Note>>();

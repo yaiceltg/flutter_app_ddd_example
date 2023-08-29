@@ -3,6 +3,7 @@ import 'package:app/src/domain/notes/notes.dart';
 import 'package:app/src/injection.dart';
 import 'package:app/src/presentation/core/constants.dart';
 import 'package:app/src/presentation/helpers/sackbar_helpers.dart';
+import 'package:app/src/presentation/pages/notes/note_form/widgets/note_color_field_widget.dart';
 import 'package:app/src/presentation/pages/notes/note_form/widgets/note_description_field_widget.dart';
 import 'package:app/src/presentation/pages/notes/note_form/widgets/note_title_field_widget.dart';
 import 'package:app/src/presentation/router/app_router.dart';
@@ -111,6 +112,14 @@ class NoteFormScaffold extends StatelessWidget {
                   : AutovalidateMode.disabled,
               child: const CustomScrollView(
                 slivers: [
+                  SliverToBoxAdapter(
+                    child: ColorField(),
+                  ),
+                  SliverToBoxAdapter(
+                    child: SizedBox(
+                      height: kFormFieldPadding,
+                    ),
+                  ),
                   SliverToBoxAdapter(
                     child: NoteTitleField(),
                   ),

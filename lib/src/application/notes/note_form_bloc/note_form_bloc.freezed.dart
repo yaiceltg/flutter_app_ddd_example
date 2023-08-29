@@ -21,6 +21,7 @@ mixin _$NoteFormEvent {
     required TResult Function(Option<Note> initialNoteOption) initialized,
     required TResult Function(String titleStr) titleChanged,
     required TResult Function(String descriptionStr) descriptionChanged,
+    required TResult Function(Color color) colorChanged,
     required TResult Function() saved,
   }) =>
       throw _privateConstructorUsedError;
@@ -29,6 +30,7 @@ mixin _$NoteFormEvent {
     TResult? Function(Option<Note> initialNoteOption)? initialized,
     TResult? Function(String titleStr)? titleChanged,
     TResult? Function(String descriptionStr)? descriptionChanged,
+    TResult? Function(Color color)? colorChanged,
     TResult? Function()? saved,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,6 +39,7 @@ mixin _$NoteFormEvent {
     TResult Function(Option<Note> initialNoteOption)? initialized,
     TResult Function(String titleStr)? titleChanged,
     TResult Function(String descriptionStr)? descriptionChanged,
+    TResult Function(Color color)? colorChanged,
     TResult Function()? saved,
     required TResult orElse(),
   }) =>
@@ -46,6 +49,7 @@ mixin _$NoteFormEvent {
     required TResult Function(_Initialized value) initialized,
     required TResult Function(_TitleChanged value) titleChanged,
     required TResult Function(_DescriptionChanged value) descriptionChanged,
+    required TResult Function(_ColorChanged value) colorChanged,
     required TResult Function(_Saved value) saved,
   }) =>
       throw _privateConstructorUsedError;
@@ -54,6 +58,7 @@ mixin _$NoteFormEvent {
     TResult? Function(_Initialized value)? initialized,
     TResult? Function(_TitleChanged value)? titleChanged,
     TResult? Function(_DescriptionChanged value)? descriptionChanged,
+    TResult? Function(_ColorChanged value)? colorChanged,
     TResult? Function(_Saved value)? saved,
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +67,7 @@ mixin _$NoteFormEvent {
     TResult Function(_Initialized value)? initialized,
     TResult Function(_TitleChanged value)? titleChanged,
     TResult Function(_DescriptionChanged value)? descriptionChanged,
+    TResult Function(_ColorChanged value)? colorChanged,
     TResult Function(_Saved value)? saved,
     required TResult orElse(),
   }) =>
@@ -154,6 +160,7 @@ class _$_Initialized implements _Initialized {
     required TResult Function(Option<Note> initialNoteOption) initialized,
     required TResult Function(String titleStr) titleChanged,
     required TResult Function(String descriptionStr) descriptionChanged,
+    required TResult Function(Color color) colorChanged,
     required TResult Function() saved,
   }) {
     return initialized(initialNoteOption);
@@ -165,6 +172,7 @@ class _$_Initialized implements _Initialized {
     TResult? Function(Option<Note> initialNoteOption)? initialized,
     TResult? Function(String titleStr)? titleChanged,
     TResult? Function(String descriptionStr)? descriptionChanged,
+    TResult? Function(Color color)? colorChanged,
     TResult? Function()? saved,
   }) {
     return initialized?.call(initialNoteOption);
@@ -176,6 +184,7 @@ class _$_Initialized implements _Initialized {
     TResult Function(Option<Note> initialNoteOption)? initialized,
     TResult Function(String titleStr)? titleChanged,
     TResult Function(String descriptionStr)? descriptionChanged,
+    TResult Function(Color color)? colorChanged,
     TResult Function()? saved,
     required TResult orElse(),
   }) {
@@ -191,6 +200,7 @@ class _$_Initialized implements _Initialized {
     required TResult Function(_Initialized value) initialized,
     required TResult Function(_TitleChanged value) titleChanged,
     required TResult Function(_DescriptionChanged value) descriptionChanged,
+    required TResult Function(_ColorChanged value) colorChanged,
     required TResult Function(_Saved value) saved,
   }) {
     return initialized(this);
@@ -202,6 +212,7 @@ class _$_Initialized implements _Initialized {
     TResult? Function(_Initialized value)? initialized,
     TResult? Function(_TitleChanged value)? titleChanged,
     TResult? Function(_DescriptionChanged value)? descriptionChanged,
+    TResult? Function(_ColorChanged value)? colorChanged,
     TResult? Function(_Saved value)? saved,
   }) {
     return initialized?.call(this);
@@ -213,6 +224,7 @@ class _$_Initialized implements _Initialized {
     TResult Function(_Initialized value)? initialized,
     TResult Function(_TitleChanged value)? titleChanged,
     TResult Function(_DescriptionChanged value)? descriptionChanged,
+    TResult Function(_ColorChanged value)? colorChanged,
     TResult Function(_Saved value)? saved,
     required TResult orElse(),
   }) {
@@ -301,6 +313,7 @@ class _$_TitleChanged implements _TitleChanged {
     required TResult Function(Option<Note> initialNoteOption) initialized,
     required TResult Function(String titleStr) titleChanged,
     required TResult Function(String descriptionStr) descriptionChanged,
+    required TResult Function(Color color) colorChanged,
     required TResult Function() saved,
   }) {
     return titleChanged(titleStr);
@@ -312,6 +325,7 @@ class _$_TitleChanged implements _TitleChanged {
     TResult? Function(Option<Note> initialNoteOption)? initialized,
     TResult? Function(String titleStr)? titleChanged,
     TResult? Function(String descriptionStr)? descriptionChanged,
+    TResult? Function(Color color)? colorChanged,
     TResult? Function()? saved,
   }) {
     return titleChanged?.call(titleStr);
@@ -323,6 +337,7 @@ class _$_TitleChanged implements _TitleChanged {
     TResult Function(Option<Note> initialNoteOption)? initialized,
     TResult Function(String titleStr)? titleChanged,
     TResult Function(String descriptionStr)? descriptionChanged,
+    TResult Function(Color color)? colorChanged,
     TResult Function()? saved,
     required TResult orElse(),
   }) {
@@ -338,6 +353,7 @@ class _$_TitleChanged implements _TitleChanged {
     required TResult Function(_Initialized value) initialized,
     required TResult Function(_TitleChanged value) titleChanged,
     required TResult Function(_DescriptionChanged value) descriptionChanged,
+    required TResult Function(_ColorChanged value) colorChanged,
     required TResult Function(_Saved value) saved,
   }) {
     return titleChanged(this);
@@ -349,6 +365,7 @@ class _$_TitleChanged implements _TitleChanged {
     TResult? Function(_Initialized value)? initialized,
     TResult? Function(_TitleChanged value)? titleChanged,
     TResult? Function(_DescriptionChanged value)? descriptionChanged,
+    TResult? Function(_ColorChanged value)? colorChanged,
     TResult? Function(_Saved value)? saved,
   }) {
     return titleChanged?.call(this);
@@ -360,6 +377,7 @@ class _$_TitleChanged implements _TitleChanged {
     TResult Function(_Initialized value)? initialized,
     TResult Function(_TitleChanged value)? titleChanged,
     TResult Function(_DescriptionChanged value)? descriptionChanged,
+    TResult Function(_ColorChanged value)? colorChanged,
     TResult Function(_Saved value)? saved,
     required TResult orElse(),
   }) {
@@ -448,6 +466,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     required TResult Function(Option<Note> initialNoteOption) initialized,
     required TResult Function(String titleStr) titleChanged,
     required TResult Function(String descriptionStr) descriptionChanged,
+    required TResult Function(Color color) colorChanged,
     required TResult Function() saved,
   }) {
     return descriptionChanged(descriptionStr);
@@ -459,6 +478,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     TResult? Function(Option<Note> initialNoteOption)? initialized,
     TResult? Function(String titleStr)? titleChanged,
     TResult? Function(String descriptionStr)? descriptionChanged,
+    TResult? Function(Color color)? colorChanged,
     TResult? Function()? saved,
   }) {
     return descriptionChanged?.call(descriptionStr);
@@ -470,6 +490,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     TResult Function(Option<Note> initialNoteOption)? initialized,
     TResult Function(String titleStr)? titleChanged,
     TResult Function(String descriptionStr)? descriptionChanged,
+    TResult Function(Color color)? colorChanged,
     TResult Function()? saved,
     required TResult orElse(),
   }) {
@@ -485,6 +506,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     required TResult Function(_Initialized value) initialized,
     required TResult Function(_TitleChanged value) titleChanged,
     required TResult Function(_DescriptionChanged value) descriptionChanged,
+    required TResult Function(_ColorChanged value) colorChanged,
     required TResult Function(_Saved value) saved,
   }) {
     return descriptionChanged(this);
@@ -496,6 +518,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     TResult? Function(_Initialized value)? initialized,
     TResult? Function(_TitleChanged value)? titleChanged,
     TResult? Function(_DescriptionChanged value)? descriptionChanged,
+    TResult? Function(_ColorChanged value)? colorChanged,
     TResult? Function(_Saved value)? saved,
   }) {
     return descriptionChanged?.call(this);
@@ -507,6 +530,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     TResult Function(_Initialized value)? initialized,
     TResult Function(_TitleChanged value)? titleChanged,
     TResult Function(_DescriptionChanged value)? descriptionChanged,
+    TResult Function(_ColorChanged value)? colorChanged,
     TResult Function(_Saved value)? saved,
     required TResult orElse(),
   }) {
@@ -524,6 +548,157 @@ abstract class _DescriptionChanged implements NoteFormEvent {
   String get descriptionStr;
   @JsonKey(ignore: true)
   _$$_DescriptionChangedCopyWith<_$_DescriptionChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_ColorChangedCopyWith<$Res> {
+  factory _$$_ColorChangedCopyWith(
+          _$_ColorChanged value, $Res Function(_$_ColorChanged) then) =
+      __$$_ColorChangedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Color color});
+}
+
+/// @nodoc
+class __$$_ColorChangedCopyWithImpl<$Res>
+    extends _$NoteFormEventCopyWithImpl<$Res, _$_ColorChanged>
+    implements _$$_ColorChangedCopyWith<$Res> {
+  __$$_ColorChangedCopyWithImpl(
+      _$_ColorChanged _value, $Res Function(_$_ColorChanged) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? color = null,
+  }) {
+    return _then(_$_ColorChanged(
+      null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ColorChanged implements _ColorChanged {
+  const _$_ColorChanged(this.color);
+
+  @override
+  final Color color;
+
+  @override
+  String toString() {
+    return 'NoteFormEvent.colorChanged(color: $color)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ColorChanged &&
+            (identical(other.color, color) || other.color == color));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, color);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ColorChangedCopyWith<_$_ColorChanged> get copyWith =>
+      __$$_ColorChangedCopyWithImpl<_$_ColorChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Note> initialNoteOption) initialized,
+    required TResult Function(String titleStr) titleChanged,
+    required TResult Function(String descriptionStr) descriptionChanged,
+    required TResult Function(Color color) colorChanged,
+    required TResult Function() saved,
+  }) {
+    return colorChanged(color);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Note> initialNoteOption)? initialized,
+    TResult? Function(String titleStr)? titleChanged,
+    TResult? Function(String descriptionStr)? descriptionChanged,
+    TResult? Function(Color color)? colorChanged,
+    TResult? Function()? saved,
+  }) {
+    return colorChanged?.call(color);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Note> initialNoteOption)? initialized,
+    TResult Function(String titleStr)? titleChanged,
+    TResult Function(String descriptionStr)? descriptionChanged,
+    TResult Function(Color color)? colorChanged,
+    TResult Function()? saved,
+    required TResult orElse(),
+  }) {
+    if (colorChanged != null) {
+      return colorChanged(color);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_TitleChanged value) titleChanged,
+    required TResult Function(_DescriptionChanged value) descriptionChanged,
+    required TResult Function(_ColorChanged value) colorChanged,
+    required TResult Function(_Saved value) saved,
+  }) {
+    return colorChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_TitleChanged value)? titleChanged,
+    TResult? Function(_DescriptionChanged value)? descriptionChanged,
+    TResult? Function(_ColorChanged value)? colorChanged,
+    TResult? Function(_Saved value)? saved,
+  }) {
+    return colorChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_TitleChanged value)? titleChanged,
+    TResult Function(_DescriptionChanged value)? descriptionChanged,
+    TResult Function(_ColorChanged value)? colorChanged,
+    TResult Function(_Saved value)? saved,
+    required TResult orElse(),
+  }) {
+    if (colorChanged != null) {
+      return colorChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ColorChanged implements NoteFormEvent {
+  const factory _ColorChanged(final Color color) = _$_ColorChanged;
+
+  Color get color;
+  @JsonKey(ignore: true)
+  _$$_ColorChangedCopyWith<_$_ColorChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -566,6 +741,7 @@ class _$_Saved implements _Saved {
     required TResult Function(Option<Note> initialNoteOption) initialized,
     required TResult Function(String titleStr) titleChanged,
     required TResult Function(String descriptionStr) descriptionChanged,
+    required TResult Function(Color color) colorChanged,
     required TResult Function() saved,
   }) {
     return saved();
@@ -577,6 +753,7 @@ class _$_Saved implements _Saved {
     TResult? Function(Option<Note> initialNoteOption)? initialized,
     TResult? Function(String titleStr)? titleChanged,
     TResult? Function(String descriptionStr)? descriptionChanged,
+    TResult? Function(Color color)? colorChanged,
     TResult? Function()? saved,
   }) {
     return saved?.call();
@@ -588,6 +765,7 @@ class _$_Saved implements _Saved {
     TResult Function(Option<Note> initialNoteOption)? initialized,
     TResult Function(String titleStr)? titleChanged,
     TResult Function(String descriptionStr)? descriptionChanged,
+    TResult Function(Color color)? colorChanged,
     TResult Function()? saved,
     required TResult orElse(),
   }) {
@@ -603,6 +781,7 @@ class _$_Saved implements _Saved {
     required TResult Function(_Initialized value) initialized,
     required TResult Function(_TitleChanged value) titleChanged,
     required TResult Function(_DescriptionChanged value) descriptionChanged,
+    required TResult Function(_ColorChanged value) colorChanged,
     required TResult Function(_Saved value) saved,
   }) {
     return saved(this);
@@ -614,6 +793,7 @@ class _$_Saved implements _Saved {
     TResult? Function(_Initialized value)? initialized,
     TResult? Function(_TitleChanged value)? titleChanged,
     TResult? Function(_DescriptionChanged value)? descriptionChanged,
+    TResult? Function(_ColorChanged value)? colorChanged,
     TResult? Function(_Saved value)? saved,
   }) {
     return saved?.call(this);
@@ -625,6 +805,7 @@ class _$_Saved implements _Saved {
     TResult Function(_Initialized value)? initialized,
     TResult Function(_TitleChanged value)? titleChanged,
     TResult Function(_DescriptionChanged value)? descriptionChanged,
+    TResult Function(_ColorChanged value)? colorChanged,
     TResult Function(_Saved value)? saved,
     required TResult orElse(),
   }) {
