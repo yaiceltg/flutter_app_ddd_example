@@ -1,6 +1,7 @@
 import 'package:app/src/application/notes/note_form_bloc/note_form_bloc.dart';
 import 'package:app/src/application/notes/note_list_bloc/note_list_bloc.dart';
 import 'package:app/src/injection.dart';
+import 'package:app/src/presentation/pages/notes/note_list/widget/note_card_widget.dart';
 import 'package:app/src/presentation/router/app_router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
@@ -36,15 +37,7 @@ class NoteListPage extends StatelessWidget implements AutoRouteWrapper {
           listener: (context, state) {
             state.maybeMap(
               orElse: () {},
-              loaded: (_) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text(
-                      'Loaded',
-                    ),
-                  ),
-                );
-              },
+              loaded: (_) {},
               failure: (_) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
@@ -66,15 +59,52 @@ class NoteListPage extends StatelessWidget implements AutoRouteWrapper {
             'Note List Page',
           ),
         ),
-        body: const Center(
-          child: Text(
-            'Note List Page',
-          ),
+        body: BlocBuilder<NoteListBloc, NoteListState>(
+          builder: (context, state) {
+            return state.map(
+              initial: (_) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              },
+              loading: (_) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              },
+              loaded: (_) {
+                if (_.notes.isEmpty()) {
+                  return const Center(
+                    child: Text('List is empty'),
+                  );
+                }
+
+                return GridView.count(
+                  crossAxisCount: 2,
+                  children: _.notes
+                      .asList()
+                      .map(
+                        (note) => NoteCardWidget(
+                          note: note,
+                        ),
+                      )
+                      .toList(),
+                );
+              },
+              failure: (_) {
+                return const Center(
+                  child: Text('Error'),
+                );
+              },
+            );
+          },
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             AutoRouter.of(context).push(
-              const NoteFormRoute(),
+              NoteFormRoute(
+                note: null,
+              ),
             );
           },
           child: const Icon(

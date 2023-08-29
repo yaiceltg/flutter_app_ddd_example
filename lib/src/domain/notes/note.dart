@@ -12,13 +12,22 @@ class Note with _$Note {
   const factory Note({
     required UniqueId id,
     required NoteTitle title,
-    NoteDescription? description,
+    NoteBody? description,
+    required NoteColor color,
   }) = _Note;
 
   factory Note.empty() => Note(
         id: UniqueId(),
         title: NoteTitle(''),
-        description: NoteDescription(''),
+        description: NoteBody(''),
+        color: NoteColor(NoteColor.predefinedColors.first),
+      );
+
+  factory Note.demo() => Note(
+        id: UniqueId(),
+        title: NoteTitle('Demo'),
+        description: NoteBody('Demo'),
+        color: NoteColor(NoteColor.predefinedColors.first),
       );
 
   Option<ValueFailure<dynamic>> get failureOption {

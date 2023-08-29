@@ -18,7 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Note {
   UniqueId get id => throw _privateConstructorUsedError;
   NoteTitle get title => throw _privateConstructorUsedError;
-  NoteDescription? get description => throw _privateConstructorUsedError;
+  NoteBody? get description => throw _privateConstructorUsedError;
+  NoteColor get color => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NoteCopyWith<Note> get copyWith => throw _privateConstructorUsedError;
@@ -29,7 +30,8 @@ abstract class $NoteCopyWith<$Res> {
   factory $NoteCopyWith(Note value, $Res Function(Note) then) =
       _$NoteCopyWithImpl<$Res, Note>;
   @useResult
-  $Res call({UniqueId id, NoteTitle title, NoteDescription? description});
+  $Res call(
+      {UniqueId id, NoteTitle title, NoteBody? description, NoteColor color});
 }
 
 /// @nodoc
@@ -48,6 +50,7 @@ class _$NoteCopyWithImpl<$Res, $Val extends Note>
     Object? id = null,
     Object? title = null,
     Object? description = freezed,
+    Object? color = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -61,7 +64,11 @@ class _$NoteCopyWithImpl<$Res, $Val extends Note>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as NoteDescription?,
+              as NoteBody?,
+      color: null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as NoteColor,
     ) as $Val);
   }
 }
@@ -72,7 +79,8 @@ abstract class _$$_NoteCopyWith<$Res> implements $NoteCopyWith<$Res> {
       __$$_NoteCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UniqueId id, NoteTitle title, NoteDescription? description});
+  $Res call(
+      {UniqueId id, NoteTitle title, NoteBody? description, NoteColor color});
 }
 
 /// @nodoc
@@ -87,6 +95,7 @@ class __$$_NoteCopyWithImpl<$Res> extends _$NoteCopyWithImpl<$Res, _$_Note>
     Object? id = null,
     Object? title = null,
     Object? description = freezed,
+    Object? color = null,
   }) {
     return _then(_$_Note(
       id: null == id
@@ -100,7 +109,11 @@ class __$$_NoteCopyWithImpl<$Res> extends _$NoteCopyWithImpl<$Res, _$_Note>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as NoteDescription?,
+              as NoteBody?,
+      color: null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as NoteColor,
     ));
   }
 }
@@ -108,7 +121,11 @@ class __$$_NoteCopyWithImpl<$Res> extends _$NoteCopyWithImpl<$Res, _$_Note>
 /// @nodoc
 
 class _$_Note extends _Note {
-  const _$_Note({required this.id, required this.title, this.description})
+  const _$_Note(
+      {required this.id,
+      required this.title,
+      this.description,
+      required this.color})
       : super._();
 
   @override
@@ -116,11 +133,13 @@ class _$_Note extends _Note {
   @override
   final NoteTitle title;
   @override
-  final NoteDescription? description;
+  final NoteBody? description;
+  @override
+  final NoteColor color;
 
   @override
   String toString() {
-    return 'Note(id: $id, title: $title, description: $description)';
+    return 'Note(id: $id, title: $title, description: $description, color: $color)';
   }
 
   @override
@@ -131,11 +150,12 @@ class _$_Note extends _Note {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
-                other.description == description));
+                other.description == description) &&
+            (identical(other.color, color) || other.color == color));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, description);
+  int get hashCode => Object.hash(runtimeType, id, title, description, color);
 
   @JsonKey(ignore: true)
   @override
@@ -148,7 +168,8 @@ abstract class _Note extends Note {
   const factory _Note(
       {required final UniqueId id,
       required final NoteTitle title,
-      final NoteDescription? description}) = _$_Note;
+      final NoteBody? description,
+      required final NoteColor color}) = _$_Note;
   const _Note._() : super._();
 
   @override
@@ -156,7 +177,9 @@ abstract class _Note extends Note {
   @override
   NoteTitle get title;
   @override
-  NoteDescription? get description;
+  NoteBody? get description;
+  @override
+  NoteColor get color;
   @override
   @JsonKey(ignore: true)
   _$$_NoteCopyWith<_$_Note> get copyWith => throw _privateConstructorUsedError;

@@ -12,6 +12,11 @@ abstract class INoteRepository {
   Future<Either<NoteFailure, KtList<Note>>> getNotes();
 
   ///
+  /// Watch notes list
+  ///
+  Stream<Either<NoteFailure, KtList<Note>>> watchNotes();
+
+  ///
   /// Get note by id
   ///
   Future<Either<NoteFailure, Note>> getNote(String id);
