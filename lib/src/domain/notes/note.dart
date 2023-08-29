@@ -21,6 +21,12 @@ class Note with _$Note {
         description: NoteDescription(''),
       );
 
+  factory Note.demo() => Note(
+        id: UniqueId(),
+        title: NoteTitle('Demo'),
+        description: NoteDescription('Demo'),
+      );
+
   Option<ValueFailure<dynamic>> get failureOption {
     return title.failureOrUnit.fold(
       (f) => some(f),

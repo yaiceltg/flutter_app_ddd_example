@@ -22,9 +22,14 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     NoteFormRoute.name: (routeData) {
+      final args = routeData.argsAs<NoteFormRouteArgs>(
+          orElse: () => const NoteFormRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const NoteFormPage(),
+        child: NoteFormPage(
+          key: args.key,
+          note: args.note,
+        ),
       );
     },
     NoteListRoute.name: (routeData) {
@@ -58,16 +63,40 @@ class GetStartedRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [NoteFormPage]
-class NoteFormRoute extends PageRouteInfo<void> {
-  const NoteFormRoute({List<PageRouteInfo>? children})
-      : super(
+class NoteFormRoute extends PageRouteInfo<NoteFormRouteArgs> {
+  NoteFormRoute({
+    Key? key,
+    Note? note,
+    List<PageRouteInfo>? children,
+  }) : super(
           NoteFormRoute.name,
+          args: NoteFormRouteArgs(
+            key: key,
+            note: note,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'NoteFormRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<NoteFormRouteArgs> page =
+      PageInfo<NoteFormRouteArgs>(name);
+}
+
+class NoteFormRouteArgs {
+  const NoteFormRouteArgs({
+    this.key,
+    this.note,
+  });
+
+  final Key? key;
+
+  final Note? note;
+
+  @override
+  String toString() {
+    return 'NoteFormRouteArgs{key: $key, note: $note}';
+  }
 }
 
 /// generated route for

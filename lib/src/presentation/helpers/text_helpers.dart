@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
 class TextHelpers {
+  static String sliceText(String text, int maxLength) {
+    if (text.length > maxLength) {
+      return '${text.substring(0, maxLength)}...';
+    }
+    return text;
+  }
+
   static RichText getHighlightedText(
     String text,
     String keyword,

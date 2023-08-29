@@ -63,7 +63,14 @@ class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
           ),
         );
 
-        if (state.note.failureOption.isSome()) {
+        if (state.note.failureOption.isNone()) {
+          // HACK: waith for 1 second to show the saving indicator
+          await Future.delayed(
+            const Duration(
+              seconds: 1,
+            ),
+          );
+
           failureOrSuccess = state.isEditing
               ? await _noteRepository.updateNote(state.note)
               : await _noteRepository.addNote(state.note);
@@ -72,6 +79,7 @@ class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
         return emitter(
           state.copyWith(
             isSaving: false,
+            showErrorMessages: true,
             saveFailureOrSuccessOption: optionOf(failureOrSuccess),
           ),
         );

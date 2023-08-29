@@ -19,19 +19,39 @@ class NoteListBloc extends Bloc<NoteListEvent, NoteListState> {
     on<NoteListEvent>(handlerEvent);
   }
 
-  Future handlerEvent(NoteListEvent event, Emitter<NoteListState> emit) {
+  Future handlerEvent(NoteListEvent event, Emitter<NoteListState> emitter) {
     return event.map(
       fetchNote: (_) async {
         Either<NoteFailure, KtList<Note>> failureOrNotes =
             await _noteRepository.getNotes();
 
-        return failureOrNotes.fold(
-          (failure) => emit(
-            NoteListState.failure(failure),
-          ),
-          (notes) => emit(
-            NoteListState.loaded(notes),
-          ),
+        failureOrNotes.fold(
+          (failure) {
+            emitter(
+              NoteListState.failure(failure),
+            );
+          },
+          (notes) {
+            emitter(
+              NoteListState.loaded(notes),
+            );
+          },
+        );
+
+        return emitter.forEach(
+          _noteRepository.watchNotes(),
+          onData: (Either<NoteFailure, KtList<Note>> failureOrNotes) {
+            //
+            return failureOrNotes.fold(
+              (f) {
+                // no need to emit here, since we already have the notes
+                return state;
+              },
+              (notes) {
+                return NoteListState.loaded(notes);
+              },
+            );
+          },
         );
       },
     );

@@ -1,8 +1,10 @@
+import 'package:app/src/domain/notes/notes.dart';
 import 'package:app/src/presentation/pages/get_started/get_started_page.dart';
 import 'package:app/src/presentation/pages/notes/note_form/note_form_page.dart';
 import 'package:app/src/presentation/pages/splash/splash_page.dart';
 import 'package:app/src/presentation/pages/notes/note_list/note_list_page.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 
 part 'app_router.gr.dart';
 
