@@ -34,5 +34,5 @@ abstract class INoteRepository {
   ///
   /// Delete note
   ///
-  Future<Either<NoteFailure, Unit>> deleteNote(String id);
+  Future<Either<NoteFailure, Unit>> deleteNote(Note id);
 }

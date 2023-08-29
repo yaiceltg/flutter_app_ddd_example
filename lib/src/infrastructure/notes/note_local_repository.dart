@@ -72,11 +72,11 @@ class NoteLocalRepository implements INoteRepository {
   }
 
   @override
-  Future<Either<NoteFailure, Unit>> deleteNote(String id) async {
+  Future<Either<NoteFailure, Unit>> deleteNote(Note id) async {
     try {
       // Find note by id, in case of not found, return NoteFailure.notFound()
       final index = notes.indexWhere(
-        (note) => note.id.getOrCrash() == id,
+        (note) => note.id.getOrCrash() == id.id.getOrCrash(),
       );
 
       if (index == -1) {

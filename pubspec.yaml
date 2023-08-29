@@ -55,6 +55,8 @@ dependencies:
   flutter_hooks: ^0.20.0
   logger: ^2.0.1
   provider: ^6.0.5
+  firebase_core: ^2.15.1
+  cloud_firestore: ^4.9.0
 
 dev_dependencies:
   flutter_test:
