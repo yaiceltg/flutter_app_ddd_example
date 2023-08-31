@@ -1,4 +1,3 @@
-import 'package:app/src/domain/core/core.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uuid/uuid.dart';
@@ -6,6 +5,7 @@ import 'package:uuid/uuid.dart';
 import './common_interfaces.dart';
 import './errors.dart';
 import './failures.dart';
+import './value_validators.dart';
 
 @immutable
 abstract class ValueObject<T> implements IValidatable {
