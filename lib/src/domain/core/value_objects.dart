@@ -5,6 +5,7 @@ import 'package:uuid/uuid.dart';
 import './common_interfaces.dart';
 import './errors.dart';
 import './failures.dart';
+import './value_validators.dart';
 
 @immutable
 abstract class ValueObject<T> implements IValidatable {
@@ -65,4 +66,17 @@ class UniqueId extends ValueObject<String> {
   }
 
   const UniqueId._(this.value);
+}
+
+class StringSingleLine extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory StringSingleLine(String input) {
+    return StringSingleLine._(
+      validateSingleLine(input),
+    );
+  }
+
+  const StringSingleLine._(this.value);
 }

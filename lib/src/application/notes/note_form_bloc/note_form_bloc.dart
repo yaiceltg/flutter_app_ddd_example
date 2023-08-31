@@ -11,7 +11,6 @@ part 'note_form_state.dart';
 
 @dev
 @prod
-@test
 @injectable
 class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
   final INoteRepository _noteRepository;

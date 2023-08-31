@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 
 @RoutePage()
 class SplashPage extends StatelessWidget {
-  const SplashPage({super.key});
+  const SplashPage({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +22,22 @@ class SplashPage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  AutoRouter.of(context).replaceNamed(
-                    NoteListRoute.name,
+                  AutoRouter.of(context).replace(
+                    const NoteListRoute(),
                   );
                 },
                 child: const Text(
                   'Go to My Notes',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  AutoRouter.of(context).push(
+                    const SignInRoute(),
+                  );
+                },
+                child: const Text(
+                  'Sign In',
                 ),
               ),
             ],

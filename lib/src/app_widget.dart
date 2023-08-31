@@ -1,4 +1,6 @@
+import 'package:app/src/application/auth/auth_bloc/auth_bloc.dart';
 import 'package:app/src/application/core/app_bloc/app_bloc.dart';
+import 'package:app/src/injection.dart';
 import 'package:app/src/presentation/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,6 +23,12 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider<AppBloc>(
           create: (context) => AppBloc(),
+        ),
+        BlocProvider(
+          create: (_) => getIt<AuthBloc>()
+            ..add(
+              const AuthEvent.authCheckRequested(),
+            ),
         ),
       ],
       child: BlocBuilder<AppBloc, AppState>(

@@ -11,7 +11,6 @@ part 'note_list_state.dart';
 
 @dev
 @prod
-@test
 @injectable
 class NoteListBloc extends Bloc<NoteListEvent, NoteListState> {
   final INoteRepository _noteRepository;
