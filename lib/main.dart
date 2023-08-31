@@ -1,4 +1,4 @@
-import 'package:app/src/app.dart';
+import 'package:app/src/app_widget.dart';
 import 'package:app/src/injection.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';

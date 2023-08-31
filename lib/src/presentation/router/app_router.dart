@@ -1,4 +1,5 @@
 import 'package:app/src/domain/notes/notes.dart';
+import 'package:app/src/presentation/pages/auth/sign_in/sign_in_page.dart';
 import 'package:app/src/presentation/pages/get_started/get_started_page.dart';
 import 'package:app/src/presentation/pages/notes/note_form/note_form_page.dart';
 import 'package:app/src/presentation/pages/splash/splash_page.dart';
@@ -32,10 +33,14 @@ class AppRouter extends _$AppRouter {
           path: '/notes/new',
           page: NoteFormRoute.page,
         ),
+        AutoRoute(
+          path: '/auth/sign-in',
+          page: SignInRoute.page,
+        ),
         // or it could be used with RedirectRoute
         RedirectRoute(
           path: '*',
-          redirectTo: '/notes',
+          redirectTo: '/',
         ),
       ];
 }

@@ -9,7 +9,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
 class NoteListPage extends StatelessWidget implements AutoRouteWrapper {
-  const NoteListPage({super.key});
+  const NoteListPage({
+    super.key,
+  });
 
   @override
   Widget wrappedRoute(BuildContext context) {

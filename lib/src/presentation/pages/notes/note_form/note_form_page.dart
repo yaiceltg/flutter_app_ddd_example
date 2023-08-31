@@ -17,7 +17,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class NoteFormPage extends StatelessWidget {
   final Note? note;
 
-  const NoteFormPage({Key? key, this.note}) : super(key: key);
+  const NoteFormPage({
+    super.key,
+    this.note,
+  });
 
   @override
   Widget build(BuildContext context) {

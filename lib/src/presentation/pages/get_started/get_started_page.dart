@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 @RoutePage()
 class GetStartedPage extends StatelessWidget {
-  const GetStartedPage({Key? key}) : super(key: key);
+  const GetStartedPage({super.key});
 
   @override
   Widget build(BuildContext context) {
